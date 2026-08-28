@@ -1,0 +1,19 @@
+
+
+services:
+  # CÂU 81 & 83: Cấu hình Backend
+  backend:
+    build: ./server
+    ports:
+      - "5000:5000"
+    # CÂU 85: Biến môi trường MongoDB
+    environment:
+      - MONGODB_URI=mongodb+srv://TruongVanLuan:luan12345@cluster0.5d1ctxz.mongodb.net/cloud_lab?retryWrites=true&w=majority
+
+  # CÂU 82 & 84: Cấu hình Frontend
+  frontend:
+    build: ./client
+    ports:
+      - "5173:4173"
+    depends_on:
+      - backend
