@@ -117,7 +117,7 @@ function App() {
 
   return (
     <div className="container">
-      <h2>🎓 Quản Lý Sinh Viên</h2>
+      <h2>🎓 Quản Lý Thông tin Sinh Viên</h2>
 
       <div className="card">
         <h3>{editId ? 'Sửa Thông Tin Sinh Viên' : '➕ Thêm Sinh Viên Mới'}</h3>
